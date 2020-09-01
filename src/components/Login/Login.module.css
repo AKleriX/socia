@@ -1,0 +1,69 @@
+.centralMetaContainer {
+    max-width: 200px;
+    margin: 10rem auto;
+}
+
+.centralMeta {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ede9e9;
+    border-radius: 5px;
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.pageName {
+    border-bottom: 1px solid #e6ecf5;
+    display: block;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    text-transform: capitalize;
+    width: 100%;
+    color: #515365;
+    position: relative;
+}
+
+.loginInput input{
+    outline: none;
+    border-radius: 20px;
+    border: 1px solid #8a8a8a;
+}
+
+ .loginInput input[type='checkbox']{
+    display: flex;
+    position: absolute;
+}
+
+.loginInput input[type='checkbox']{
+    display: flex;
+    position: absolute;
+    color: red;
+}
+
+.loginInput span{
+    margin-left: 25px;
+}
+
+.loginButton button {
+    border-radius: 10%;
+    background: #23d2e2;
+    height: 25px;
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: 'Roboto', "Segoe UI", sans-serif;
+    border: none;
+    margin-left: 50px;
+}
+
+.loginButton button:active {
+    background-color: #fa6342;
+}

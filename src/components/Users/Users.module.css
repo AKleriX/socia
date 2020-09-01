@@ -1,0 +1,58 @@
+.centralMetaContainer {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.centralMeta {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ede9e9;
+    border-radius: 5px;
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.searchBlock {
+    display: flex;
+    justify-content: center;
+    color: #757a95;
+}
+
+.searchBlock input{
+    box-sizing: border-box;
+    border: medium none;
+    font-size: 13px;
+    padding: 13px 30px;
+    outline: none;
+    background-color: rgba(0,0,0,0);
+}
+
+.searchBlock input[type='checkbox']{
+    position: absolute;
+    right: 46px;
+    top: 25%;
+}
+
+.searchBlock button{
+    position: absolute;
+    right: 60px;
+    top: 25%;
+    width: 30px;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    outline: none;
+}
+
+
+.searchBlock button:hover{
+    opacity: .5;
+}
+
+.searchCol {
+    border: 2px #757a95 solid;
+    border-radius: 20px;
+    position: relative;
+}

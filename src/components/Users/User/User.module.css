@@ -1,0 +1,68 @@
+.userPhoto {
+    display: inline;
+    width: 90px;
+    border: white 1px solid;
+    border-radius: 100%;
+}
+
+.userBlock {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ede9e9;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 15px;
+    position: relative;
+    width: 25vw;
+    height: 125px;
+}
+
+.userBlock:hover {
+    box-shadow: 0 0 5px #333;
+}
+
+
+.userAvatarBlock {
+    display: flex;
+    flex-flow: column;
+    justify-content: left;
+    position: absolute;
+}
+
+.followButton {
+    margin: 0 auto;
+}
+
+.followButton button {
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #23d2e2;
+    outline: none;
+    cursor: pointer;
+}
+
+.followButton button:active {
+    background-color: #fa6342 ;
+}
+
+.nameBlock {
+    display: flex;
+    justify-content: center;
+}
+
+.nameBlock a {
+    color: #333;
+}
+
+.nameBlock a:hover h4{
+    opacity: .3;
+}
+
+
+.userCol {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,40 @@
+.profileNavbarCol {
+    flex: 0 0 84%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: block;
+}
+
+.profileNavbar {
+    border: medium none;
+    line-height: 65px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.profileNavbarItem {
+    margin-right: 50px;
+    margin-bottom: 0;
+    display: inline-block;
+    text-align: -webkit-match-parent;
+    line-height: 65px;
+    list-style: none;
+}
+
+.profileNavbarItem a{
+    color: #535165;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+}
+
+a.activeLink {
+    color: #fa6342;
+}

@@ -1,0 +1,13 @@
+.preloader {
+    width: 10%;
+    margin: 20em auto auto;
+    display: flex;
+}
+
+.loginPreloader {
+    display: flex;
+    float: right;
+    margin: 18px -10px auto 20px ;
+    height: 33px;
+    background-color: #34465d;
+}

@@ -1,0 +1,50 @@
+.header {
+    background: #34465d;
+    display: block;
+    height: 66px;
+    padding: 0 16px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 99999;
+    position: relative;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif ;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.logoBox {
+    margin-top: 12px;
+    margin-bottom: auto;
+    display: inline-block;
+    width: 110px;
+    z-index: 10;
+    position: relative;
+    vertical-align: inherit;
+}
+
+.logo {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.loginIcon {
+    cursor: pointer;
+    display: flex;
+    float: right;
+    margin: 18px 12.5px auto 20px ;
+    height: 33px;
+    opacity: .5;
+    background-color: #34465d;
+}
+
+.loginIcon:hover, .loginActive img {
+    opacity: 1;
+}

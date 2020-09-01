@@ -1,0 +1,66 @@
+.tabPanel {
+    display: block;
+}
+
+.centralMeta {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ede9e9;
+    border-radius: 5px;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px;
+    position: relative;
+
+}
+
+.pageName {
+    border-bottom: 1px solid #e6ecf5;
+    display: block;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    text-transform: capitalize;
+    width: 100%;
+    color: #515365;
+    position: relative;
+}
+
+.pageName img {
+    margin-bottom: -.5px;
+    height: 12px;
+}
+
+.centralMeta input,
+.centralMeta textarea {
+    color: black;
+    min-height: 25px;
+    font-weight: 700;
+    opacity: .7;
+    border-radius: 10px;
+    border: #34465d 1px solid;
+    outline: none;
+}
+
+.centralMeta button {
+    border-radius: 10%;
+    background: #23d2e2;
+    width: 50px;
+    height: 25px;
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: 'Roboto', "Segoe UI", sans-serif;
+    border: none;
+    position: absolute;
+    right: 15px;
+}
+
+.centralMeta button:active {
+   background-color: #fa6342;
+}
+
