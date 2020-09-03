@@ -3,6 +3,8 @@ import ReactPaginate from 'react-paginate';
 import style from './Paginator.module.css';
 import cn from 'classnames';
 
+/*Компонент отрисовки списка выбора страницы с пользователями*/
+/*Component of rendering the list of selection of the page with users*/
 const Paginator = ({currentPage, onPageChanged, totalUsersCount, pageSize}) => {
 
     return (

@@ -9,12 +9,19 @@ import {login} from "../../redux/auth-reducer";
 import style from './Login.module.css';
 import cn from 'classnames';
 
-
+/*Компонент, отрисовывающий форму логина, обернутую в ReduxForm*/
+/*The component that renders the login form wrapped in ReduxForm*/
 const Login = ({login, isAuth, captchaURL}) => {
+
+    /*Функция обработки отправки заполненной формы логина*/
+    /*Function to handle sending a completed login form*/
     const onSubmitLoginForm = (formData) => {
         login(formData.email, formData.password, formData.rememberMe, formData.captcha);
     }
 
+
+    /*Если выполнена авторизация - происходит переадисация на страницу профиля*/
+    /*If authorization is performed, it is redirected to the profile page*/
     if (isAuth) {
         return (
             <Redirect to={'/profile'}/>
@@ -31,6 +38,8 @@ const Login = ({login, isAuth, captchaURL}) => {
     );
 }
 
+/*Компонент формы логина*/
+/*Login form component*/
 const LoginForm = ({handleSubmit, error, captchaURL}) => {
     return (
         <form onSubmit={handleSubmit}>
@@ -58,8 +67,12 @@ const LoginForm = ({handleSubmit, error, captchaURL}) => {
     );
 }
 
+/*Оборачивание ReduxForm формы логина*/
+/*Wrapping a ReduxForm login form*/
 const LoginFormContainer = reduxForm({form: 'login'})(LoginForm);
 
+/*Получение из state необходимых данных*/
+/*Getting the necessary data from the state*/
 const mapStateToProps = (state) => {
     return (
         {
@@ -70,4 +83,6 @@ const mapStateToProps = (state) => {
 
 }
 
+/*Подключение к store компонента логина*/
+/*Connecting to the store of the login component*/
 export default connect(mapStateToProps, {login})(Login);

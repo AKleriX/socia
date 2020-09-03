@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import './App.css';
 import {connect} from "react-redux";
-import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
+import {HashRouter, Switch, Route, Redirect} from 'react-router-dom';
 import HeaderContainer from "./components/Header/HeaderContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import {initializeApp} from "./redux/auth-reducer";
@@ -12,13 +12,27 @@ import NoPageError from "./components/NoPageError/NoPageError";
 
 const App = ({initializeApp, initialized}) => {
 
+    {/*Задаем хук для первичной инициализации приложения, авторизации и
+    получения данных авторизированного пользователя*/}
+    {/*We set a hook for the initial initialization of the application,
+    authorization and receiving data of an authorized user*/}
     useEffect(() => {
         initializeApp()
     });
 
     return (
-        <BrowserRouter>
+        <HashRouter>
+            {/*Для реализации перехода между страницами оборачиваем компоненты в Router*/}
+            {/*To implement the transition between pages, wrap components in Router*/}
+            {/*Отрисовка компоненты-header*/}
+            {/*Rendering the header component*/}
             <HeaderContainer/>
+            {/*Если произведена инициализация приложения -
+            отрисовываем соответствующий контент, в зависимости от URL-пути.
+            Иначе отрисовываем Preloader*/}
+            {/*If the application is initialized -
+             render the appropriate content based on the URL path.
+             Otherwise, draw the Preloader*/}
             {initialized ?
                 <Switch>
                     <Route exact path={'/'}>
@@ -39,10 +53,12 @@ const App = ({initializeApp, initialized}) => {
                 </Switch> :
                 <Preloader/>
             }
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
+{/*Получаем из state информацию о том, была ли произведена инициализация приложения*/}
+{/*We get information from the state about whether the application has been initialized*/}
 const mapStateToProps = (state) => {
     return (
         {
@@ -51,4 +67,6 @@ const mapStateToProps = (state) => {
     );
 }
 
+{/*Подключаем App компонент к store, передавая ей в пропсках параметры и Thunk Creator*/}
+{/*We connect the App component to the store, passing it parameters and Thunk Creator in props*/}
 export default connect(mapStateToProps, {initializeApp})(App);

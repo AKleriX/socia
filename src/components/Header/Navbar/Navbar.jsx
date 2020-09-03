@@ -5,8 +5,11 @@ import searchUsersIcon from '../../../assets/images/search.svg';
 import LogoutIcon from '../../../assets/images/logout.svg';
 import style from  './Navbar.module.css';
 
-
+{/*Презентационный компонент Navbar*/}
+{/*Navbar presentation component*/}
 const Navbar = ({login, logout, userId}) => {
+    /*Отрисовываем список навигационных ссылок-ярлыков, для навигации по приложению*/
+    /*Rendering a list of navigation shortcut links to navigate the application*/
     return (
             <ul className={style.settingsArea}>
                 <li>

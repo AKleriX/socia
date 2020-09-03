@@ -5,7 +5,11 @@ import React from "react";
 import style from './ProfileEditPage.module.css';
 import editIcon from "../../../assets/images/edit.svg";
 
+/*Презентационный компонент формы редактирования профиля*/
+/*Presentation component of the profile edit form*/
 const ProfileEditForm = ({handleSubmit, profile, error, editModeProfile}) => {
+    /*Если режим редактирования выключен - поня не доступны для редактирования, иначе - доступны*/
+    /*If the editing mode is off, the concepts are not available for editing, otherwise, they are available*/
     const disabledControl = !editModeProfile ? 'disabled' : '';
     return (
         <form onSubmit={handleSubmit}>
@@ -44,8 +48,9 @@ const ProfileEditForm = ({handleSubmit, profile, error, editModeProfile}) => {
     );
 }
 
+/*Презентационный компонент страницы редактирования профиля*/
+/*Presentation component of the profile edit page*/
 const ProfileEditPage = ({profile, onEditFormSubmit, editModeProfile, setProfileEditMode}) => {
-
     return (
         <div className={style.tabPanel}>
             <div className={style.centralMeta}>
@@ -62,7 +67,8 @@ const ProfileEditPage = ({profile, onEditFormSubmit, editModeProfile, setProfile
         </div>
     );
 }
-
+/*Оборачивание формы редактирования в Redux-Form*/
+/*Wrapping an edit form in Redux-Form*/
 const ProfileEdit = reduxForm({form: 'edit-profile'})(ProfileEditForm);
 
 export default ProfileEditPage;

@@ -6,7 +6,8 @@ import profileReducer from "./profile-reducer";
 import usersReducer from "./users-reducer";
 
 
-
+// Объединение всех редьюсеров
+// Combine all reducers
 const reducers = combineReducers({
     form: formReducer,
     auth: authReducer,
@@ -16,8 +17,11 @@ const reducers = combineReducers({
 
 
 
-
+// Задание параметров для использования ReduxDevTools
+// Set options for using Redux DevTools
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+// Создание store с заданными редьюсеров и middleware
+// Creating a store with specified reducers and middleware
 const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)));
 
 

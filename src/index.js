@@ -8,6 +8,8 @@ import {Provider} from "react-redux";
 
 ReactDOM.render(
     <React.StrictMode>
+        {/*Создаем контекст для доступа всех дочерних компонент приложения к store*/}
+        {/*Create a context for all child components of the application to access the store*/}
         <Provider store={store}>
             <App/>
         </Provider>

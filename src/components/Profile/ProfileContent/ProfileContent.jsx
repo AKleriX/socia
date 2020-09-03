@@ -5,6 +5,8 @@ import ProfileContacts from "./ProfileContacts/ProfileContacts";
 import ProfileJob from "./ProfileJob/ProfileJob";
 import ProfileEditPage from "../ProfileEditPage/ProfileEditPage";
 
+/*Компонент контента профиля, отрисовывающий содержимаое в зависимости от URL*/
+/* Profile content component that renders content based on URL */
 const ProfileContent = ({profile, setProfileEditMode, editModeProfile, onEditFormSubmit, userIdInURL, authUserId}) => {
     return (
         <Switch>

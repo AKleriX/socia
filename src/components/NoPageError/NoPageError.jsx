@@ -1,5 +1,7 @@
 import React from "react";
 
+/*Презентационный компонент страницы, информирующей об отсутствии страницы по запрошенному URL*/
+/*Presentation component of the page informing about the absence of a page at the requested URL*/
 const NoPageError = () => {
     return (
         <div>

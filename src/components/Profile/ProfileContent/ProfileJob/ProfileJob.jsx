@@ -3,6 +3,8 @@ import style from './ProfileJob.module.css';
 import jobIcon from '../../../../assets/images/skills.svg';
 import cn from 'classnames';
 
+/*Презентационный компонент раздела job профиля*/
+/*Presentation component of the job section of the profile*/
 const ProfileJob = ({lookingForAJob, lookingForAJobDescription}) => {
     return (
         <div className={style.tabPanel}>
@@ -11,6 +13,8 @@ const ProfileJob = ({lookingForAJob, lookingForAJobDescription}) => {
                     <img src={jobIcon} alt={'Job'}/>
                     &nbsp;Job:
                 </div>
+                {/*Если пользователь ищет работу, отображается описание работы*/}
+                {/*If the user is looking for a job, the job description is displayed*/}
                 {lookingForAJob ?
                     <div>
                         <p>
