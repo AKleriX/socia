@@ -150,3 +150,98 @@ export const profileAPI = {
             }));
     }
 }
+// Объект для работы с API сервера по диалогам с пользователями
+// Object for working with the server API by dialogs with users
+export const dialogsAPI =  {
+
+    // Получение списка всех начатых диалогов
+    // Getting a list of all started dialogs
+    getAllDialogs() {
+        return (instance.get(`dialogs`)
+            .then(response => {
+                return response.data;
+            }));
+    },
+
+    // Начало диалога с пользователем по его userId
+    // Starting a dialogue with a user by his userId
+    startChatting(userId) {
+        return (instance.put(`dialogs/${userId}`)
+            .then(response => {
+                return response.data;
+            }));
+    },
+
+    // Получение списка сообщений с пользователем по его userId
+    // Getting a list of messages with a user by his userId
+    getListOfMessages(userId) {
+        return (instance.get(`dialogs/${userId}/messages`)
+            .then(response => {
+                return response.data;
+            }));
+    },
+
+    // Отправка сообщения message пользователю по его userId
+    // Sending a message to a user by his userId
+    sendMessage(userId, message) {
+        return (instance.post(`dialogs/${userId}/messages`, {body: message})
+            .then(response => {
+                return response.data;
+            }));
+    },
+
+    // Получение проверки просмотра своего отправленного сообщения по его messageId
+    // Receive a view check for your sent message by its messageId
+    viewedMessage(messageId) {
+        return (instance.get(`dialogs/messages/${messageId}/viewed`)
+            .then(response => {
+                return response.data;
+            }));
+    },
+
+    // Отправка сообщения с заданным messageId в спам
+    // Sending a message with a given messageId to spam
+    addMessageToSpam(messageId) {
+        return (instance.post(`dialogs/messages/${messageId}/spam`)
+            .then(response => {
+                return response.data;
+            }));
+    },
+
+    // Удаление сообщения с заданным messageId только для себя
+    // Deleting a message with a given messageId only for yourself
+    deleteMessage(messageId) {
+        return (instance.delete(`dialogs/messages/${messageId}`)
+            .then(response => {
+                return response.data;
+            }));
+    },
+
+    // Восстановление удаленного или отмеченного как спам сообщения по его userId
+    // Recovering a deleted or marked spam message by its userId
+    restoreMessage(messageId) {
+        return (instance.put(`dialogs/messages/${messageId}/restore`)
+            .then(response => {
+                return response.data
+            }));
+    },
+
+    // Получение сообщений с пользователем по его userId за дату date
+    // Receiving messages with a user by his userId for date date
+    getMessageThanDate(userId, date) {
+        return (instance.get(`dialogs/${userId}/messages/new?newerThen=${date}`)
+            .then(response => {
+                return response.data;
+            }));
+    },
+
+
+    // Получение списка новых сообщений, еще не просмотренных
+    // Retrieving a list of new messages not yet viewed
+    getNewMessages() {
+        return (instance.get(`dialogs/messages/new/count`)
+            .then(response => {
+                return response.data;
+            }));
+    }
+}
